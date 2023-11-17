@@ -1,0 +1,16 @@
+<h1>Top#index</h1>
+<p>Find me in app/views/top/index.html.erb</p>
+
+<% if @user.present? %>
+<div>
+  <p>Normalized User Profile: <%= @user["name"] %></p>
+
+</div>
+<% end %>
+
+<!-- Place a login button anywhere on your application -->
+  <%= button_to 'Login', '/auth/auth0', method: :post, data: { turbo: false } %>
+
+
+  <!-- Place a logout button anywhere on your application -->
+  <%= button_to 'Logout', '/auth/logout', method: :get, data: { turbo: false } %>
